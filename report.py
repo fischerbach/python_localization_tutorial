@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import sys
 import io
 
+import gettext
+_ = gettext.gettext
+
 from docx import Document
 
 
@@ -41,9 +44,9 @@ def generate_report(city, date, dataset):
     query = f"Date == '{date}'"
     ranking = dataset.query(query).groupby('City')[['Total']].sum()
     if(city == ranking.sort_values('Total', ascending=False).reset_index().iloc[0]['City']):
-      return "Branch performed the best of all branches in terms of revenue!"
+      return _("Branch performed the best of all branches in terms of revenue!")
     elif (city == ranking.sort_values('Total', ascending=True).reset_index().iloc[0]['City']):
-      return "Branch performed the worst of all branches in terms of revenue!"
+      return _("Branch performed the worst of all branches in terms of revenue!")
     else:
       return False
   
