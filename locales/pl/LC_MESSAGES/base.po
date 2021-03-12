@@ -9,40 +9,40 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : ((n%10>=2 && n%10<=4) && ((n%100<12 || n%100>14))) ? 1 : 2;\n"
 
 msgid "Branch performed the best of all branches in terms of revenue!"
-msgstr "Branch performed the best of all branches in terms of revenue!"
+msgstr "Oddział osiągnął najwyższe przychody ze wszystkich oddziałów!"
 
 msgid "Branch performed the worst of all branches in terms of revenue!"
-msgstr "Branch performed the worst of all branches in terms of revenue!"
+msgstr "Oddział osiągnął najniższe przychody ze wszystkich oddziałów!"
 
 msgid "Men"
 msgstr "Mężczyźni"
 
 msgid "Revenue"
-msgstr "Revenue"
+msgstr "Przychody"
 
 msgid "Revenue by category and gender"
-msgstr "Revenue by category and gender"
+msgstr "Przychody według kategorii i płci"
 
 msgid "Sales in {city} on {date}"
-msgstr "Sales in {city} on {date}"
+msgstr "Sprzedaż w {city} w dniu {date}"
 
 msgid "Test"
 msgstr "Test"
 
 msgid "The average profit per transaction was {verdict[0]:0.2f} and it was {verdict[1]} the global average ({verdict[2]:0.2f})."
-msgstr "The average profit per transaction was {verdict[0]:0.2f} and it was {verdict[1]} the global average ({verdict[2]:0.2f})."
+msgstr "Średni zysk na transakcję wynosił {verdict[0]:0.2f} i był {verdict[1]} średnia globalna ({verdict[2]:0.2f})."
 
 msgid "The daily revenue was {revenue:0.2f}."
-msgstr "The daily revenue was {revenue:0.2f}."
+msgstr "Dzienne przychody wyniosły {revenue:0.2f}."
 
 msgid "Women"
-msgstr "Women"
+msgstr "Kobiety"
 
 msgid "equal"
-msgstr "equal"
+msgstr "równy"
 
 msgid "higher than"
-msgstr "higher than"
+msgstr "wyższy niż"
 
 msgid "lower than"
-msgstr "lower than"
+msgstr "niższy niż"
