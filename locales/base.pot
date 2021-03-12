@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-03-12 08:17+0100\n"
+"POT-Creation-Date: 2021-03-12 11:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,11 +15,51 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: report.py:47
+#: report.py:36
+msgid "Men"
+msgstr ""
+
+#: report.py:37
+msgid "Women"
+msgstr ""
+
+#: report.py:39
+msgid "Revenue"
+msgstr ""
+
+#: report.py:42
+msgid "Revenue by category and gender"
+msgstr ""
+
+#: report.py:53
 msgid "Branch performed the best of all branches in terms of revenue!"
 msgstr ""
 
-#: report.py:49
+#: report.py:55
 msgid "Branch performed the worst of all branches in terms of revenue!"
+msgstr ""
+
+#: report.py:64
+msgid "higher than"
+msgstr ""
+
+#: report.py:66
+msgid "lower than"
+msgstr ""
+
+#: report.py:68
+msgid "equal"
+msgstr ""
+
+#: report.py:76
+msgid "Sales in {city} on {date}"
+msgstr ""
+
+#: report.py:77
+msgid "The daily revenue was {revenue:0.2f}."
+msgstr ""
+
+#: report.py:82
+msgid "The average profit per transaction was {verdict[0]:0.2f} and it was {verdict[1]} the global average ({verdict[2]:0.2f})."
 msgstr ""
 

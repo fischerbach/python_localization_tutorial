@@ -16,6 +16,12 @@ rcParams['font.family'] = 'monospace'
 rcParams['font.sans-serif'] = ['Lucida Console']
 
 
+from inspect import currentframe
+def f(s):
+    frame = currentframe().f_back
+    return eval(f"f'{s}'", frame.f_locals, frame.f_globals)
+
+
 def generate_report(city, date, dataset, _=_):
   def get_barchart(day_data):
     width = 0.35
@@ -27,13 +33,13 @@ def generate_report(city, date, dataset, _=_):
       women_totals.append(day_data.query(f'`Product line` == "{category}" and Gender=="Female"')['Total'].sum())
 
     fig, ax = plt.subplots()
-    ax.bar(labels, men_totals, width, label='Men')
-    ax.bar(labels, women_totals, width, bottom=men_totals, label='Women')
+    ax.bar(labels, men_totals, width, label=_('Men'))
+    ax.bar(labels, women_totals, width, bottom=men_totals, label=_('Women'))
 
-    ax.set_ylabel('Revenue')
+    ax.set_ylabel(_('Revenue'))
     ax.legend()
 
-    ax.set_title('Revenue by category and gender')
+    ax.set_title(_('Revenue by category and gender'))
 
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
@@ -55,11 +61,11 @@ def generate_report(city, date, dataset, _=_):
     global_average = dataset.query(query)['Total'].mean()
     average = day_data['Total'].mean()
     if (global_average < average):
-      return (average, "higher than", global_average)
+      return (average, _("higher than"), global_average)
     elif (global_average > average):
-      return (average, "lower than", global_average)
+      return (average, _("lower than"), global_average)
     else:
-      return (average, "equal", global_average)
+      return (average, _("equal"), global_average)
 
   query_day = f"City=='{city}' and Date=='{date}'"
   day_data = dataset.query(query_day)
@@ -67,16 +73,16 @@ def generate_report(city, date, dataset, _=_):
 
   document = Document()
 
-  document.add_heading(f'Sales in {city} on {date}', 0)
-  document.add_paragraph(f'The daily revenue was {revenue:0.2f}.')
+  document.add_heading(f(_('Sales in {city} on {date}')), 0)
+  document.add_paragraph(f(_('The daily revenue was {revenue:0.2f}.')))
   ranking = compare(city, date, dataset)
   if ranking:
     document.add_paragraph(ranking)
   verdict = compare_average(city, date, dataset, day_data)
-  document.add_paragraph(f"The average profit per transaction was {verdict[0]:0.2f} and it was {verdict[1]} the global average ({verdict[2]:0.2f}).")
+  document.add_paragraph(f(_("The average profit per transaction was {verdict[0]:0.2f} and it was {verdict[1]} the global average ({verdict[2]:0.2f}).")))
 
   document.add_picture(get_barchart(day_data))
-  document.save(f'report_{city}_{date}.docx')
+  document.save(f'report_{city}_{date}.docx') #maybe filename should be localized also? ;)
 
 
 
