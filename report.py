@@ -16,7 +16,7 @@ rcParams['font.family'] = 'monospace'
 rcParams['font.sans-serif'] = ['Lucida Console']
 
 
-def generate_report(city, date, dataset):
+def generate_report(city, date, dataset, _=_):
   def get_barchart(day_data):
     width = 0.35
     labels = day_data.query(query_day)['Product line'].unique()
@@ -83,6 +83,14 @@ def generate_report(city, date, dataset):
 if __name__ == "__main__":
     data = pd.read_csv(sys.argv[1])
 
+    try:
+      lang = sys.argv[4]
+      localizator = gettext.translation('base', localedir='locales', languages=[lang])
+      localizator.install()
+      _ = localizator.gettext 
+    except:
+        pass
+
     city = sys.argv[2]
     date = sys.argv[3]
-    generate_report(city, date, data)
+    generate_report(city, date, data, _)
