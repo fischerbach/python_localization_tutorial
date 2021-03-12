@@ -1,0 +1,15 @@
+{
+
+    "writeKey": "WRITE_KEY",
+    "readKey": "READ_KEY",
+    
+    "upload": {  
+      "type": "pot",
+      "files": "locales/base.pot"         
+    },
+    
+    "download": {
+      "files": "locales/${lang}/LC_MESSAGES/base.po"
+    }
+    
+  }

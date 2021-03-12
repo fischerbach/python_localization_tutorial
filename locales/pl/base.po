@@ -15,7 +15,7 @@ msgid "Branch performed the worst of all branches in terms of revenue!"
 msgstr "Branch performed the worst of all branches in terms of revenue!"
 
 msgid "Men"
-msgstr "Mężczyźni"
+msgstr "This is test"
 
 msgid "Revenue"
 msgstr "Revenue"
@@ -25,9 +25,6 @@ msgstr "Revenue by category and gender"
 
 msgid "Sales in {city} on {date}"
 msgstr "Sales in {city} on {date}"
-
-msgid "Test"
-msgstr "Test"
 
 msgid "The average profit per transaction was {verdict[0]:0.2f} and it was {verdict[1]} the global average ({verdict[2]:0.2f})."
 msgstr "The average profit per transaction was {verdict[0]:0.2f} and it was {verdict[1]} the global average ({verdict[2]:0.2f})."
